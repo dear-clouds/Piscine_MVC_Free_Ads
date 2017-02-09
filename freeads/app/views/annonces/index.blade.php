@@ -17,14 +17,14 @@
    <div class="row">
 @foreach ($annonces as $annonce)
 <div class="col-lg-4">
-   <a href="annonce/{{ $annonce->id }}"><img class="img-thumbnail" src="../{{ $annonce->photo }}"></a>
+   <a href="annonce/{{ $annonce->id }}"><img class="img-thumbnail" src="../{{ $annonce->photo }}" style="height:200px;"></a>
       <h3>{{ $annonce->title }}</h3>
       <p>{{ $annonce->description }}</p>
 
       <p><a class="btn btn-default" href="annonce/{{ $annonce->id }}" role="button">{{ $annonce->price }}€</a></p>
 <br><br><br>      </div>
 
-      
+
 
       @endforeach
 </div>

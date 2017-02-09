@@ -14,12 +14,12 @@ class IndexController extends BaseController {
 
 	public function showAdmin()
 	{
-		$projects = Project::all();
-		$pages = Page::all();
-		$projects = Project::orderBy('created_at', 'DESC')->paginate(10);
-		$pages = Page::orderBy('created_at', 'DESC')->paginate(10);
+		$annonces = Annonce::all();
+		$messages = Message::all();
+		$annonces = Annonce::orderBy('created_at', 'DESC')->paginate(10);
+		$messages = Message::orderBy('created_at', 'DESC')->paginate(10);
 
-		return View::make('admin', compact('projects', 'pages'));
+		return View::make('admin', compact('annonces', 'messages'));
 	}
 
 }

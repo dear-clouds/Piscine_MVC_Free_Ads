@@ -19,14 +19,14 @@
    <div class="row">
 @foreach ($results as $result)
 <div class="col-lg-4">
-   <img class="img-thumbnail" src="../{{ $result->photo }}">
+   <img class="img-thumbnail" src="../{{ $result->photo }}" style="height:200px;">
       <h3>{{ $result->title }}</h3>
       <p>{{ $result->description }}</p>
 
       <p><a class="btn btn-default" href="../annonce/{{ $result->id }}" role="button">{{ $result->price }}€</a></p>
 <br><br><br>      </div>
 
-      
+
 
       @endforeach
 </div>

@@ -47,10 +47,10 @@
 <br>
 
 
-<div class="row">
+<div class="row-fluid">
 @foreach ($annonces as $annonce)
 <div class="col-lg-4">
-   <a href="annonce/{{ $annonce->id }}"><img class="img-thumbnail" src="{{ $annonce->photo }}" alt="thumb"></a>
+   <a href="annonce/{{ $annonce->id }}"><img class="img-thumbnail" src="{{ $annonce->photo }}" alt="thumb" style="height:200px;"></a>
       <h3>{{ $annonce->title }}</h3>
       <p>{{ $annonce->description }}</p>
 
@@ -64,5 +64,3 @@
 
 </div>
 @stop
-
-

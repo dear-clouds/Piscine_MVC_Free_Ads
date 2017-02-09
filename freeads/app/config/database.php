@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'freeads',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'L0Jvuj27',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

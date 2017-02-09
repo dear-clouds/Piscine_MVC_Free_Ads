@@ -13,9 +13,9 @@
 <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
 
-<p class="pull-right"><a href="create" class="btn btn-default btn-lg">Envoyer un message</a></p>
+<p class="pull-right"><a href="message/create" class="btn btn-default btn-lg">Envoyer un message</a></p>
 
- 
+
  @if ($messages->count())
 <table class="table table-striped table-bordered">
     <thead>
