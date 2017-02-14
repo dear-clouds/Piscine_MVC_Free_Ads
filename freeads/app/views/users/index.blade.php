@@ -7,7 +7,7 @@
 
 @section('content')
 
-<p class="pull-right"><a href="files" class="btn btn-default btn-lg"><img src="../img/folder.png" alt="upload"> Gérer les uploads</a></p>
+<p class="pull-right"><a href="admin" class="btn btn-default btn-lg"><img src="../img/folder.png" alt="upload"> Gérer les uploads</a></p>
 
 <h1>Membres</h1>
 

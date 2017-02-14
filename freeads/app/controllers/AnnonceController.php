@@ -8,7 +8,7 @@ class AnnonceController extends BaseController {
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-		
+
 
 		return View::make('annonces.index', compact('annonces'));
 	}
@@ -71,7 +71,7 @@ class AnnonceController extends BaseController {
 
 		$annonce = Annonce::find($id);
 
-		if ($annonce) 
+		if ($annonce)
 		{
 			return View::make('annonces.edit')
 			->with('annonce', $annonce);
@@ -96,8 +96,8 @@ class AnnonceController extends BaseController {
 			return Redirect::to('annonce/' . $id . '/edit')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
-		} 
-		else 
+		}
+		else
 		{
 			$annonce = Annonce::find($id);
 			$annonce->title       	= Input::get('title');
@@ -134,7 +134,7 @@ class AnnonceController extends BaseController {
 
 		if(Input::get('keywords'))
 			$results->where('title', 'LIKE', '%' . Input::get('keywords') . '%')
-					->orWhere('description', 'LIKE', '%' . Input::get('keywords') . '%');
+							->orWhere('description', 'LIKE', '%' . Input::get('keywords') . '%');
 
 		if(Input::get('categorie'))
 			$results->where('categorie', '=', Input::get('categorie'));
@@ -146,20 +146,6 @@ class AnnonceController extends BaseController {
 			$results->where('price', '<=', Input::get('price'));
 
 		$results = $results->get();
-
-    // $keyword = Input::get('keywords');
-    // $categorie = Input::get('categorie');
-    // $departement = Input::get('departement');
-    // $price = Input::get('price');
-
-    // $query = DB::table('annonces')
-    // 		->where('title', 'LIKE', "%{$keyword}%")
-    //         ->orWhere('description', 'LIKE', "%{$keyword}%");
-    //         // ->orWhere('departement', 'LIKE', "%{$departement}%")
-    //         // ->orWhere('price', 'LIKE', "%{$price}%")
-    //         // ->orWhere('categorie', 'LIKE', "%{$categorie}%");
-
-    // $results = $query->get();
 
 		return View::make('annonces.search', compact('results'));
 	}
