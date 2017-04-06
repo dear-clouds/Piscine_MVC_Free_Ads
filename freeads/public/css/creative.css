@@ -42,6 +42,11 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+
+.miniatures {
+  width: 100px !important;
+}
+
 .bg-primary {
   background-color: #F05F40;
 }
